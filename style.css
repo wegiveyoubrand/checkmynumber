@@ -30,9 +30,11 @@ ul {
   padding: 20px;
 }
 ul li {
-  height: 100px;
-  flex: 1 1 180px;
+  height: 120px;
+  flex: 1 1 200px;
   background: lightblue;
+  border-radius: 20px;
+  box-shadow: 0 0 16px #ddd;
   transition: 0.3s ease;
 }
 
@@ -40,6 +42,7 @@ ul li a {
   display: grid;
   height: 100%;
   place-items: center;
+  color: darkblue;
 }
 
 ul li:hover {
@@ -49,6 +52,10 @@ ul li:hover {
 
 a {
   text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 header {
@@ -63,7 +70,8 @@ header {
 footer {
   padding: 20px;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -86,11 +94,11 @@ footer img {
   display: grid;
   padding: 15px;
   place-items: center;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .modal.close {
- transform: scale(0);
+  transform: scale(0);
 }
 .modal-popup {
   position: relative;
@@ -98,14 +106,35 @@ footer img {
   max-width: 400px;
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
+  padding: 2rem;
 }
 .modal-popup i {
   position: absolute;
   right: 15px;
   top: 15px;
   font-size: 20px;
+  cursor: pointer;
 }
 .modal-popup h2 {
-  margin-top: 20px;
+  margin-top: 1rem;
+}
+
+.modal-popup input[type="submit"] {
+  padding: 10px 2rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 100%;
+  border-radius: 20px;
+  background-color: darkblue;
+  color: #fff;
+  transition: 0.35s;
+}
+
+.modal-popup input[type="submit"]:hover {
+  box-shadow: 0 0 5px 0 darkblue;
+  background-color: #fff;
+  color: darkblue;
 }
