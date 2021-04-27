@@ -21,15 +21,17 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
-
 ul {
   list-style: none;
+}
+
+main ul {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   padding: 20px;
 }
-ul li {
+main ul li {
   height: 120px;
   flex: 1 1 200px;
   background: lightblue;
@@ -43,19 +45,78 @@ ul li a {
   height: 100%;
   place-items: center;
   color: darkblue;
+  text-decoration: none;
 }
 
-ul li:hover {
+main ul li:hover {
   box-shadow: 0 0 16px darkblue;
   border-radius: 10px;
+  background-color: #fff;
 }
 
-a {
-  text-decoration: none;
+main a {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
+}
+
+nav {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: calc(100vh - 64px);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  z-index: -1;
+
+  transition: 0.5s ease;
+}
+
+nav.active {
+  z-index: 100;
+  opacity: 1;
+}
+
+nav.active ul {
+  transform: translateX(0);
+}
+nav ul {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  transform: translateX(100%);
+
+  transition: 0.35s ease;
+}
+nav li {
+  font-size: 120%;
+  padding: 10px;
+}
+
+nav a {
+  position: relative;
+  border-radius: 30px;
+  border-bottom: 1px solid rgba(0, 0, 140, 0.7);
+  transition: 0.35s;
+  justify-content: start;
+  padding: 1rem;
+  letter-spacing: 0.5px;
+}
+nav a:hover {
+  border-bottom: 5px solid rgba(0, 0, 140, 0.7);
+  font-weight: 700;
+}
+nav a {
+  z-index: 001;
 }
 
 header {
@@ -96,10 +157,12 @@ footer img {
   place-items: center;
   transition: 1s ease-out;
   opacity: 1;
+  z-index: 1000;
 }
 
 .modal.close {
   opacity: 0;
+  z-index: -1;
 }
 
 .modal.close .modal-popup {
