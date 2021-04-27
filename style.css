@@ -78,8 +78,7 @@ nav {
   height: calc(100vh - 64px);
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   opacity: 0;
   z-index: -1;
   transition: 0.5s ease;
@@ -87,8 +86,8 @@ nav {
 
 .close-nav {
   height: 100%;
-  width: auto;
-  background: transparent;
+  width: 100%;
+  background:#000;
 }
 nav.active {
   z-index: 100;
@@ -123,7 +122,7 @@ nav a {
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 140, 0.7);
   transition: 0.35s;
-  display: grid;
+  display: flex;
   height: 100%;
   width: 100%;
   justify-content:start;
