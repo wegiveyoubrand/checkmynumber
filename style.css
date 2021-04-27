@@ -126,7 +126,7 @@ nav a {
   display: flex;
   height: 100%;
   width: 100%;
-  justify-content: start;
+  justify-content: space-between;
   padding: 1rem;
   gap: 10px;
   letter-spacing: 0.5px;
