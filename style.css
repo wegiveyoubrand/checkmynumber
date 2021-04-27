@@ -87,7 +87,7 @@ nav {
 
 .close-nav {
   height: 100%;
-  width: 100%;
+  width: auto;
   background: transparent;
 }
 nav.active {
