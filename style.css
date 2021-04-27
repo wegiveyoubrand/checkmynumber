@@ -92,7 +92,7 @@ nav.active ul {
   transform: translateX(0);
 }
 nav ul {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 400px;
   padding: 10px;
@@ -112,6 +112,7 @@ nav li {
 nav a {
   position: relative;
   border-radius: 30px;
+  background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 140, 0.7);
   transition: 0.35s;
   display: grid;
