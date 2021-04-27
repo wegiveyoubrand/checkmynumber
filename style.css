@@ -123,7 +123,7 @@ nav a {
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 140, 0.7);
   transition: 0.35s;
-  display: flex;
+  display: grid;
   height: 100%;
   width: 100%;
   justify-content:start;
