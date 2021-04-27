@@ -15,6 +15,9 @@ body {
   font-size: 16px;
   font-family: "poppins";
 }
+main {
+  padding: 20px;
+}
 
 .main-wrapper {
   display: grid;
@@ -29,7 +32,6 @@ main ul {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
 }
 main ul li {
   text-align: center;
@@ -68,14 +70,21 @@ main a {
   letter-spacing: 1px;
   font-weight: 700;
 }
+.logo {
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.logo:hover {
+  opacity: 0.7;
+}
 
 nav {
   position: fixed;
-  top: 64px;
+  top: 69px;
   left: 0;
   bottom: 0;
   overflow: hidden;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 69px);
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: grid;
@@ -99,30 +108,28 @@ nav.active ul {
   transform: translateX(0);
 }
 nav ul {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(8, 8, 27);
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   padding: 10px;
   height: 100%;
-  display: grid;
   justify-self: flex-end;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
   transform: translateX(100%);
-
   transition: 0.35s ease;
 }
 nav li {
   display: grid;
-  font-size: 120%;
+  height: 100px;
+  font-size: 100%;
   padding: 10px;
+}
+
+nav li:not(:last-child) {
+  border-bottom: 2px solid #eee;
 }
 
 nav a {
   position: relative;
-  border-radius: 30px;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 140, 0.7);
   transition: 0.35s;
   display: flex;
   height: 100%;
@@ -132,14 +139,21 @@ nav a {
   gap: 10px;
   letter-spacing: 0.5px;
   align-items: center;
+  transition: ease 0.3s;
+  color: #f3f3f3;
 }
-nav a:hover {
-  border-bottom: 5px solid rgba(0, 0, 140, 0.7);
-  font-weight: 700;
+
+nav i {
+  margin-right: 10px;
 }
+
 nav a {
   z-index: 001;
 }
+nav a:hover {
+  font-weight: 700;
+}
+
 img {
   object-fit: contain;
   height: 100%;
@@ -168,7 +182,7 @@ footer {
   width: 100%;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0px 0px 5px 0 rgba(0, 0, 140, 0.3);
+  box-shadow: 0px 0px 5px 0 rgb(8, 8, 27);
 }
 
 footer img {
@@ -220,21 +234,21 @@ footer img {
   margin-top: 1rem;
 }
 
-.modal-popup input[type="submit"] {
+input[type="submit"] {
   padding: 10px 2rem;
   margin-top: 1rem;
   outline: none;
   border: none;
-  cursor: pointer;
-  font-family: "Poppins";
-  font-size: 100%;
-  border-radius: 20px;
   background-color: darkblue;
   color: #fff;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 100%;
+  border-radius: 20px;
   transition: 0.35s;
 }
 
-.modal-popup input[type="submit"]:hover {
+input[type="submit"]:hover {
   box-shadow: 0 0 5px 0 darkblue;
   background-color: #fff;
   color: darkblue;

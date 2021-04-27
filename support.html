@@ -25,7 +25,7 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="main-wrapper">
+  <body class="main-wrapper" id="support">
     <header>
       <div class="logo" onclick="location.href='/index.html'">
         Know My Number
@@ -34,29 +34,29 @@
     </header>
 
     <main>
-      <ul>
-        <li>
-          <a href="tel: %2A 663 %23">
-            <img src="/network/mtn.png" alt="" />
-            MTN</a
-          >
-        </li>
-        <li>
-          <a href="tel:1244"> <img src="/network/glo.jfif" alt="" />Glo</a>
-        </li>
-        <li>
-          <a href="tel: %2A 121 %2A 3 %2A 4 %23">
-            <img src="/network/airtel.png" alt="" />
-            Airtel</a
-          >
-        </li>
-        <li>
-          <a href="tel: %2A 248 %23">
-            <img src="/network/9mobile.png" alt="" />
-            Etisalat</a
-          >
-        </li>
-      </ul>
+      <h2>Support Us</h2>
+      <div class="form-wrapper">
+        <form action="">
+          <div class="form-group">
+            <label for="">Enter your support fee</label>
+            <input type="text" placeholder="NGN"/>
+          </div>
+          <div class="form-group">
+            <label for="">Complete Using</label>
+            <select name="" id="">
+              <option value="">USSD Transfer Code</option>
+              <option value="">Others</option>
+            </select>
+            <div class="form-group">
+              <label for="">Bank</label>
+              <select name="" id="">
+                <option value="">Fidelity</option>
+              </select>
+            </div>
+            <input type="submit" value="Continue">
+          </div>
+        </form>
+      </div>
     </main>
     <nav>
       <div class="close-nav menu-toggle"></div>
@@ -71,25 +71,13 @@
           <a href="#"><i class="material-icons">share</i> Share</a>
         </li>
         <li>
-          <a href="/support.html"
+          <a href="#"
             ><i class="material-icons">volunteer_activism</i> Support Us</a
           >
         </li>
       </ul>
     </nav>
     <footer>Developed by <img src="/Layer 1.png" alt="" /></footer>
-
-    <div class="modal">
-      <div class="modal-popup">
-        <i class="material-icons close-modal">close</i>
-        <h2>Kindly Understand!</h2>
-        <p>
-          For security reasons, the # sign has simply be omitted. Insert before
-          sending
-        </p>
-        <input type="submit" value="Continue" class="close-modal" />
-      </div>
-    </div>
 
     <script src="./index.js"></script>
   </body>
