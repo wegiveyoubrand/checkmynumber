@@ -121,6 +121,8 @@ nav a {
 }
 
 header {
+  position: sticky;
+  top: 0;
   padding: 20px;
   background: darkblue;
   color: #fff;
