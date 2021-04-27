@@ -1,6 +1,7 @@
 const closeModalPopup = document.querySelectorAll(".close-modal");
 const Modal = document.querySelector(".modal");
-const menuToggle = document.querySelector(".menu-toggle");
+const menuToggle = document.querySelectorAll(".menu-toggle");
+
 const nav = document.querySelector("nav");
 function closeModal() {
   console.log("closed");
@@ -12,6 +13,8 @@ closeModalPopup.forEach((closeAction) => {
   });
 });
 
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
+menuToggle.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
 });

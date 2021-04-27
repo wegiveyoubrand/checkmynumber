@@ -27,22 +27,19 @@ ul {
 
 main ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
   padding: 20px;
 }
 main ul li {
   text-align: center;
   flex: 1 1 200px;
-  background: lightblue;
+  background: rgba(0, 0, 160, 0.01);
   border-radius: 20px;
-  box-shadow: 0 0 16px #ddd;
+  box-shadow: 0 0 5px 0 darkblue;
   transition: 0.3s ease;
-  display: flex;
+
   padding: 1rem;
-  gap: 10px;
-  flex-direction: column;
-  justify-content: center;
 }
 main ul li img {
   height: 100px;
@@ -52,6 +49,11 @@ a {
   text-decoration: none;
 }
 main ul li a {
+  gap: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main ul li:hover {
@@ -83,6 +85,11 @@ nav {
   transition: 0.5s ease;
 }
 
+.close-nav {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
 nav.active {
   z-index: 100;
   opacity: 1;
@@ -115,10 +122,11 @@ nav a {
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 140, 0.7);
   transition: 0.35s;
-  display: grid;
+  display: flex;
   height: 100%;
   justify-content: start;
   padding: 1rem;
+  gap: 10px;
   letter-spacing: 0.5px;
   align-items: center;
 }
@@ -144,6 +152,10 @@ header {
   justify-content: space-between;
 }
 
+header i {
+  cursor: pointer;
+}
+
 footer {
   padding: 20px;
   text-align: center;
@@ -153,7 +165,7 @@ footer {
   width: 100%;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0px -5px 5px 0 #eee;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 140, 0.3);
 }
 
 footer img {
@@ -167,11 +179,11 @@ footer img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 140, 0.5);
   display: grid;
   padding: 15px;
   place-items: center;
-  transition: 1s ease-out;
+  transition: .8s ease-out;
   opacity: 1;
   z-index: 1000;
 }
