@@ -78,8 +78,8 @@ nav {
   height: calc(100vh - 64px);
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: auto 1fr;
   opacity: 0;
   z-index: -1;
   transition: 0.5s ease;
