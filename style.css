@@ -124,6 +124,7 @@ nav a {
   transition: 0.35s;
   display: flex;
   height: 100%;
+  width: 100%;
   justify-content: start;
   padding: 1rem;
   gap: 10px;
