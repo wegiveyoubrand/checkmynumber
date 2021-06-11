@@ -36,25 +36,11 @@
     <main>
       <h2>Support Us</h2>
       <div class="form-wrapper">
-        <form action="">
-          <div class="form-group">
-            <label for="">Enter your support fee</label>
-            <input type="text" placeholder="NGN"/>
-          </div>
-          <div class="form-group">
-            <label for="">Complete Using</label>
-            <select name="" id="">
-              <option value="">USSD Transfer Code</option>
-              <option value="">Others</option>
-            </select>
-            <div class="form-group">
-              <label for="">Bank</label>
-              <select name="" id="">
-                <option value="">Fidelity</option>
-              </select>
-            </div>
-            <input type="submit" value="Continue">
-          </div>
+        <form>
+          <script src="https://js.paystack.co/v1/inline.js"></script>
+          <button type="button" class="button" onclick="payWithPaystack()">
+            Continue
+          </button>
         </form>
       </div>
     </main>
@@ -80,5 +66,31 @@
     <footer>Developed by <img src="/Layer 1.png" alt="" /></footer>
 
     <script src="./index.js"></script>
+    <script>
+      function payWithPaystack() {
+        var handler = PaystackPop.setup({
+          key: "pk_live_f36b014537ae41f678780fe87b4b06b9a215f65c",
+          email: "appheart.africa@gmail.com",
+          amount: 5000,
+          ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+          metadata: {
+            custom_fields: [
+              {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678",
+              },
+            ],
+          },
+          callback: function (response) {
+            alert("success. transaction ref is " + response.reference);
+          },
+          onClose: function () {
+            alert("window closed");
+          },
+        });
+        handler.openIframe();
+      }
+    </script>
   </body>
 </html>

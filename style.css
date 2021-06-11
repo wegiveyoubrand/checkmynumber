@@ -234,7 +234,8 @@ footer img {
   margin-top: 1rem;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button {
   padding: 10px 2rem;
   margin-top: 1rem;
   outline: none;
@@ -248,8 +249,18 @@ input[type="submit"] {
   transition: 0.35s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:hover {
   box-shadow: 0 0 5px 0 darkblue;
   background-color: #fff;
   color: darkblue;
+}
+
+.ads {
+  display: flex;
+  justify-content: center;
+  height: 160px;
+  /* padding: 2rem; */
+  margin-bottom: 20px;
+  overflow: hidden;
 }
