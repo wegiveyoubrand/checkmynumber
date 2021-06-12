@@ -264,3 +264,30 @@ button:hover {
   margin-bottom: 20px;
   overflow: hidden;
 }
+
+.banner {
+  position: sticky;
+  top: 0;
+  padding: 20px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  height: auto;
+  background-color: rgb(245, 245, 252);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  border-radius: 30px;
+
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: rgba(51, 51, 51, 0.871);
+}
+
+.banner button {
+  margin-left: 20px;
+}
+.banner button a {
+  color: inherit;
+}
