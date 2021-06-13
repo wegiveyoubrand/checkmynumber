@@ -1,3 +1,13 @@
+// Make Sure Service Workers are Supported
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw_cached_pages.js")
+      .then((reg) => console.log("Service Worker: Registered"))
+      .catch((err) => console.log(`Service Worker: Error: ${err}`));
+  });
+}
 const closeModalPopup = document.querySelectorAll(".close-modal");
 const Modal = document.querySelector(".modal");
 const menuToggle = document.querySelectorAll(".menu-toggle");
