@@ -45,7 +45,7 @@ main ul li {
 }
 
 a {
-  color: darkblue;
+  color: hsl(223, 82%, 24%);
   text-decoration: none;
 }
 .section ul li a {
