@@ -159,7 +159,7 @@ header {
   position: sticky;
   top: 0;
   padding: 2rem;
-  background: darkblue;
+  background: hsl(223, 82%, 24%);
   color: #fff;
   font-weight: bold;
   display: flex;
