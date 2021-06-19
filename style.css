@@ -29,9 +29,10 @@ ul {
 }
 
 main ul {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   flex-wrap: wrap;
+  grid-gap: 2rem;
 }
 main ul li {
   text-align: center;
@@ -40,9 +41,9 @@ main ul li {
   border-radius: 20px;
   box-shadow: 0 0 5px 0 darkblue;
   transition: 0.3s ease;
-
   padding: 1rem;
 }
+
 main ul li img {
   height: 100px;
 }
@@ -167,6 +168,7 @@ header {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
 }
 
 header i {
@@ -297,5 +299,45 @@ button:hover {
   color: inherit;
   font-size: 12px;
   display: block;
-  width: 100%;height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section__title {
+  font-weight: 700;
+  padding: 20px;
+}
+
+.img__container {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* MEDIA SCREEN SIZES */
+@media (min-width: 520px) {
 }
