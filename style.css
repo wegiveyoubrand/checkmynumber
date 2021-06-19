@@ -16,7 +16,7 @@ body {
   font-family: "poppins";
 }
 main {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .main-wrapper {
@@ -162,7 +162,7 @@ img {
 header {
   position: sticky;
   top: 0;
-  padding: 20px;
+  padding: 2rem;
   background: darkblue;
   color: #fff;
   font-weight: bold;
