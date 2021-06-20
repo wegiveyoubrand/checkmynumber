@@ -12,8 +12,9 @@ body {
   width: 100%;
 }
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "poppins";
+  background-color: hsl(240, 54%, 97%);
 }
 main {
   padding: 0 2rem;
@@ -29,43 +30,57 @@ ul {
 }
 
 main ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* flex-wrap: wrap; */
-  grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
 }
 main ul li {
-  text-align: center;
-  background-color: hsl(240, 54%, 97%);
-  border-radius: 20px;
-  box-shadow: 0 0 5px 0 rgb(77, 77, 221);
   transition: 0.3s ease;
-  padding: 2rem;
   width: auto;
 }
 
 a {
-  color: hsl(223, 82%, 24%);
+  color: black;
   text-decoration: none;
+  padding: 20px;
 }
 .section ul li a {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr 100px;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.section ul li:not(:last-child) a {
+  border-bottom: 1px solid rgba(66, 68, 80, 0.1);
 }
 
 .section ul li:hover {
-  box-shadow: 0 0 16px rgba(0, 0, 139, 0.57);
+  box-shadow: 0 0 15px rgba(0, 0, 139, 0.57);
   border-radius: 10px;
   background-color: #fff;
 }
 
-.section a {
+.section > div {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+
+.section > div p {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.section > div p i {
   font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
 }
 .logo {
   cursor: pointer;
@@ -180,7 +195,7 @@ footer {
   width: 100%;
   justify-content: center;
   gap: 10px;
-  border-top: 2px solid rgba(9, 9, 61, 0.7);
+  border-top: 1px solid rgba(66, 68, 80, 0.1);
 }
 
 footer img {
@@ -321,11 +336,10 @@ button:hover {
   font-weight: 500;
   text-align: center;
   padding: 20px 0;
-
 }
 .img__container {
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -339,8 +353,6 @@ button:hover {
   position: absolute;
   height: 100%;
   width: 100%;
-  height: 100px;
-  width: 100px;
   object-fit: cover;
 }
 
