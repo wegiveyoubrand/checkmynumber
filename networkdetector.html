@@ -36,7 +36,7 @@
   <body class="main-wrapper" id="networkProvider">
     <header>
       <div class="logo" onclick="location.href='/index.html'">
-        Know My Number
+        Know My Phone Network
       </div>
       <div class="menu-toggle"><i class="material-icons">menu</i></div>
     </header>
@@ -53,15 +53,17 @@
       <div class="section">
         <!-- <div class="section__title">SEND AIRTIME</div> -->
         <div class="">
-          <h2>Know My Phone's Network</h2>
-
-          <p>V.2.1 Currently Supporting 4 Mobile Networks</p>
           <div class="form-group">
             <label for=""></label>
-            <input type="text" placeholder="Type phone number" class="phoneNumber"/>
+            <input
+              type="text"
+              placeholder="Type phone number"
+              class="phoneNumber"
+            />
           </div>
           <button class="open-modal">Detect Network Provider</button>
           <div class="response"></div>
+          <p><small> V.2.1 Currently Supporting 4 Mobile Networks</small></p>
         </div>
       </div>
     </main>
@@ -94,7 +96,7 @@
     <footer>Developed by <img src="/Layer 1.png" alt="" /></footer>
 
     <div class="modal">
-      <div class="modal-popup">
+      <div class="modal-popup #modalResponse">
         <i class="material-icons close-modal">close</i>
         <h2>We appreciate you..</h2>
         <p>Thank you for choosing mobileng</p>

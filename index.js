@@ -72,7 +72,7 @@ let network_response = function () {
   userInput = inputField.value;
   console.log(userInput);
   if (userInput === "0803") {
-    return (response = `Phone numbeR is MTN`);
+    return (response = `Phone number is MTN`);
   } else if (userInput === "0805") {
     alert("GLO");
   } else {
