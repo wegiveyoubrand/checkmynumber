@@ -12,6 +12,7 @@ const closeModalPopup = document.querySelectorAll(".close-modal");
 const Modal = document.querySelector(".modal");
 const menuToggle = document.querySelectorAll(".menu-toggle");
 const openModal = document.querySelectorAll(".open-modal");
+const inputField = document.querySelector(".phoneNumber");
 
 const nav = document.querySelector("nav");
 function closeModal() {
@@ -19,7 +20,7 @@ function closeModal() {
 }
 openModal.forEach((openAction) => {
   openAction.addEventListener("click", () => {
-    // openModal();
+    network_response();
     Modal.classList.remove("close");
   });
 });
@@ -56,24 +57,28 @@ const network_number_prefix = [
   },
 ];
 
+let userInput = "";
 let MTN_Prefix = "";
+
 function MTN() {
   network_number_prefix.map(function (network) {
-    MTN_Prefix = network.MTN;
+    return (MTN_Prefix = network.MTN);
   });
 }
+
 MTN();
 
-let network_response = "";
-
+let network_response = function () {
+  userInput = inputField.value;
+  console.log(userInput);
+  if (userInput === "0803") {
+    return (response = `Phone numbeR is MTN`);
+  } else if (userInput === "0805") {
+    alert("GLO");
+  } else {
+    alert("invalid input");
+  }
+};
 MTN_Prefix.map((number) => {
   console.log(number);
 });
-// switch (network_response) {
-//   case :
-
-//     break;
-
-//   default:
-//     break;
-// }
