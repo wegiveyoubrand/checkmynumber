@@ -55,15 +55,13 @@ a {
   letter-spacing: 1px;
   font-weight: 500;
   padding: 20px 2rem;
-
 }
 
 .section ul li:not(:last-child) a {
   border-bottom: 1px solid rgba(66, 68, 80, 0.1);
 }
 
-
-.section ul li:last-child a{
+.section ul li:last-child a {
   text-transform: lowercase;
 }
 
@@ -363,6 +361,23 @@ button:hover {
   object-fit: cover;
 }
 
+.form-group {
+}
+
+.form-group input {
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+
+  width: 100%;
+}
+
 /* MEDIA SCREEN SIZES */
 @media (min-width: 520px) {
+}
+
+#networkProvider button {
+  margin-left: auto;
 }
