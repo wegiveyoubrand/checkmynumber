@@ -208,7 +208,8 @@ footer img {
   width: auto;
 }
 
-.modal {
+.modal,
+.responseModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -373,6 +374,8 @@ button:hover {
 
   width: 100%;
 }
+
+/* Response_Modal */
 
 /* MEDIA SCREEN SIZES */
 @media (min-width: 520px) {

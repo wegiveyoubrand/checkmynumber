@@ -11,11 +11,18 @@ if ("serviceWorker" in navigator) {
 const closeModalPopup = document.querySelectorAll(".close-modal");
 const Modal = document.querySelector(".modal");
 const menuToggle = document.querySelectorAll(".menu-toggle");
+const openModal = document.querySelectorAll(".open-modal");
 
 const nav = document.querySelector("nav");
 function closeModal() {
   console.log("closed");
 }
+openModal.forEach((openAction) => {
+  openAction.addEventListener("click", () => {
+    // openModal();
+    Modal.classList.remove("close");
+  });
+});
 closeModalPopup.forEach((closeAction) => {
   closeAction.addEventListener("click", () => {
     closeModal();
@@ -48,3 +55,25 @@ const network_number_prefix = [
     ETISALAT: ["0809", "0817", "0818", "0908", "0909"],
   },
 ];
+
+let MTN_Prefix = "";
+function MTN() {
+  network_number_prefix.map(function (network) {
+    MTN_Prefix = network.MTN;
+  });
+}
+MTN();
+
+let network_response = "";
+
+MTN_Prefix.map((number) => {
+  console.log(number);
+});
+// switch (network_response) {
+//   case :
+
+//     break;
+
+//   default:
+//     break;
+// }
