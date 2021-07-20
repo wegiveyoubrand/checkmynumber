@@ -398,3 +398,11 @@ button:hover {
 #networkProvider button {
   margin-left: auto;
 }
+
+.stored-numbers {
+  background: rgba(0, 0, 139, 0.57);
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 25px;
+  padding: 2rem;
+}

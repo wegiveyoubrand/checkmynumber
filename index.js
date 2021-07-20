@@ -19,9 +19,11 @@ function closeModal() {
   console.log("closed");
 }
 openModal.forEach((openAction) => {
-  openAction.addEventListener("click", () => {
-    network_response();
+  openAction.addEventListener("click", (e) => {
+    // network_response();
+    e.preventDefault;
     Modal.classList.remove("close");
+    Modal.classList.add("active");
   });
 });
 closeModalPopup.forEach((closeAction) => {
