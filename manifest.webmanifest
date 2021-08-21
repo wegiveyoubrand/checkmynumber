@@ -10,12 +10,12 @@
 
   "icons": [
     {
-      "src": "../images/touch/Icon-72_x_72.png",
+      "src": "/assets/favicons/touch/Icon-72_x_72.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "/images/touch/Icon-96_x_96.png",
+      "src": "/assets/favicons/touch/Icon-96_x_96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
