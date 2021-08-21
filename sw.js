@@ -1,9 +1,17 @@
 const cacheAssets = [
-  "index.html",
-  "support.html",
-  "style.css",
-  "index.js",
-  "/images/touch/logo-144px.png",
+  "/index.html",
+  "/support.html",
+
+  "/src/css/style.css",
+  "/src/js/index.js",
+
+  "/assets/images/logo-144px.png",
+
+  "/assets/images/mtn.png",
+  "/assets/images/glo.jfif",
+  "/assets/images/airtel.png",
+  "/assets/images/9mobile.png",
+  "/assets/images/Layer 1.png"
 ];
 
 self.addEventListener("install", (e) => {
