@@ -3,7 +3,7 @@ const cacheAssets = [
   "/support.html",
 
   "/src/css/style.css",
-  "/src/js/index.js",
+  "/index.js",
 
   "/assets/images/logo-144px.png",
 
