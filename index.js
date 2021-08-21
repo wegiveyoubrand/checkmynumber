@@ -11,11 +11,38 @@ if ("serviceWorker" in navigator) {
     });
 }
 
+const savedNumber = [];
+
 const closeModalPopup = document.querySelectorAll(".close-modal");
 const Modal = document.querySelector(".modal");
 const menuToggle = document.querySelectorAll(".menu-toggle");
 const openModal = document.querySelectorAll(".open-modal");
 const inputField = document.querySelector(".phoneNumber");
+const slotControl = document.querySelector(".slotControl");
+const slot = document.querySelector(".slot");
+const slotContainer = document.querySelector(".slot-content");
+
+function addeventListeners() {
+  slotControl.addEventListener("click", (e) => {
+    e.preventDefault;
+    slot.classList.toggle("active");
+  });
+}
+const slotContentLayout = ` 
+  <div class="">
+    <div class="slot-description">My MTN</div>
+    <div class="slot-number">07037650988</div>
+  </div>`;
+
+if (savedNumber.length < 1) {
+  slotContainer.innerHTML += `
+    <div class="">
+      <p class="">No saved numbers</p>
+    </div>`;
+} else {
+  slotContainer.innerHTML += slotContentLayout;
+}
+addeventListeners();
 
 const nav = document.querySelector("nav");
 function closeModal() {

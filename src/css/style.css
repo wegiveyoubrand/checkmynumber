@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+* {
+  user-select: none;
+}
+
 html,
 body {
   height: 100%;
@@ -201,8 +205,17 @@ header {
   z-index: 1000;
 }
 
+header > div {
+  align-items: center;
+  display: flex;
+}
+
 header i {
   cursor: pointer;
+}
+
+header > div > div:not(:last-child) {
+  margin-right: 1rem;
 }
 
 footer {
@@ -386,6 +399,69 @@ button:hover {
   outline: none;
   border: none;
 
+  width: 100%;
+}
+
+/* SLOT STYLING */
+.slot {
+  position: fixed;
+  top: 6rem;
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+  max-height: 190px;
+  right: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top;
+  transition: 0.35s ease-in-out;
+}
+.slot .toFullScreen {
+  position: absolute;
+  top: 0;
+  background: none;
+  box-shadow: none;
+  right: 0;
+  width: unset;
+  cursor: pointer;
+}
+.slot.active {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.slotControl {
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: rgb(10, 18, 87);
+  border-radius: 20px;
+}
+
+.slot-content {
+}
+
+.slot-content > div {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 140, 0.15);
+}
+
+.slot-content > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.slot-description {
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.slot button {
   width: 100%;
 }
 
