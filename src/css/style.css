@@ -425,7 +425,7 @@ button:hover {
   top: 0;
   background: none;
   box-shadow: none;
-  right: 0;
+  right: 1px;
   width: unset;
   cursor: pointer;
 }
