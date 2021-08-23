@@ -1,116 +1,43 @@
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then((registration) => {
-      console.log("SW Registered");
-      console.log(registration);
-    })
-    .catch((error) => {
-      console.log("SW Registration failed");
-      console.log(error);
-    });
-}
-
-const savedNumber = [];
-
-const closeModalPopup = document.querySelectorAll(".close-modal");
-const Modal = document.querySelector(".modal");
-const menuToggle = document.querySelectorAll(".menu-toggle");
-const openModal = document.querySelectorAll(".open-modal");
-const inputField = document.querySelector(".phoneNumber");
-const slotControl = document.querySelector(".slotControl");
-const slot = document.querySelector(".slot");
-const slotContainer = document.querySelector(".slot-content");
+import "./src/js/setup.js";
+import * as all from "./src/js/imports.js";
 
 function addeventListeners() {
-  slotControl.addEventListener("click", (e) => {
+  // Slot Control event Listeners
+  all.slotControl.addEventListener("click", (e) => {
     e.preventDefault;
-    slot.classList.toggle("active");
+    all.slot.classList.toggle("active");
   });
-}
-const slotContentLayout = ` 
-  <div class="">
-    <div class="slot-description">My MTN</div>
-    <div class="slot-number">07037650988</div>
-  </div>`;
 
-if (savedNumber.length < 1) {
-  slotContainer.innerHTML += `
-    <div class="">
-      <p class="">No saved numbers</p>
-    </div>`;
-} else {
-  slotContainer.innerHTML += slotContentLayout;
-}
-addeventListeners();
-
-const nav = document.querySelector("nav");
-function closeModal() {
-  console.log("closed");
-}
-openModal.forEach((openAction) => {
-  openAction.addEventListener("click", (e) => {
-    // network_response();
-    e.preventDefault;
-    Modal.classList.remove("close");
-    Modal.classList.add("active");
+  // Modal Control Event Listenerss
+  all.closeModalPopup.forEach((closeAction) => {
+    closeAction.addEventListener("click", () => {
+      all.Modal.classList.add("close");
+    });
   });
-});
-closeModalPopup.forEach((closeAction) => {
-  closeAction.addEventListener("click", () => {
-    closeModal();
-    Modal.classList.add("close");
+
+  all.openModal.forEach((openAction) => {
+    openAction.addEventListener("click", (e) => {
+      e.preventDefault;
+      all.Modal.classList.remove("close");
+      all.Modal.classList.add("active");
+    });
   });
-});
 
-menuToggle.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-});
-
-const network_number_prefix = [
-  {
-    MTN: [
-      "0703",
-      "0706",
-      "0803",
-      "0806",
-      "0810",
-      "0813",
-      "0814",
-      "0816",
-      "0903",
-      "0906",
-    ],
-    GLO: ["0705", "0805", "0807", "0811", "0815", "0905"],
-    AIRTEL: ["0701", "0708", "0802", "0808", "0812", "0902", "0907", "0901"],
-    ETISALAT: ["0809", "0817", "0818", "0908", "0909"],
-  },
-];
-
-let userInput = "";
-let MTN_Prefix = "";
-
-function MTN() {
-  network_number_prefix.map(function (network) {
-    return (MTN_Prefix = network.MTN);
+  // Menu Control
+  all.menuToggle.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      all.nav.classList.toggle("active");
+    });
   });
 }
 
-MTN();
-
-let network_response = function () {
-  userInput = inputField.value;
-  console.log(userInput);
-  if (userInput === "0803") {
-    return (response = `Phone number is MTN`);
-  } else if (userInput === "0805") {
-    alert("GLO");
+function setUpSlotContainer() {
+  if (all.savedNumber.length < 1) {
+    all.slotContainer.innerHTML += `<div>No saved number</div>`;
   } else {
-    alert("invalid input");
+    all.slotContainer.innerHTML += all.slotContentLayout;
   }
-};
-MTN_Prefix.map((number) => {
-  console.log(number);
-});
+}
+
+setUpSlotContainer();
+addeventListeners();
