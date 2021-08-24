@@ -9,7 +9,9 @@
 * {
   user-select: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   height: 100%;
@@ -115,11 +117,11 @@ a {
 
 nav {
   position: fixed;
-  top: 69px;
+  top: 6rem;
   left: 0;
   bottom: 0;
   overflow: hidden;
-  height: calc(100vh - 69px);
+  height: calc(100vh - 6rem);
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: grid;
