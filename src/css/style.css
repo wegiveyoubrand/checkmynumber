@@ -26,62 +26,49 @@ main {
   padding: 0 2rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 .main-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
-ul {
-  list-style: none;
-}
 
-main ul {
-  display: flex;
-  flex-direction: column;
+.networks {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #fff;
+  grid-gap: 5%;
+
   border-radius: 20px;
 }
-main ul li {
+
+.networks .network {
+  height: 100%;
+  width: 100%;
   transition: 0.3s ease;
-  width: auto;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  padding: 20px;
-}
-.section ul li a {
+.networks .network a {
   display: grid;
-  grid-template-columns: 1fr 100px;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
+  place-items: center;
   padding: 20px 2rem;
 }
 
-.section ul li:not(:last-child) a {
-  border-bottom: 1px solid rgba(66, 68, 80, 0.1);
-}
-
-.section ul li:last-child a {
-  text-transform: lowercase;
-}
-
-.section ul li:hover {
+.networks .network:hover {
   box-shadow: 0 0 15px rgba(0, 0, 139, 0.57);
   border-radius: 10px;
   background-color: #fff;
-}
-
-.section > div {
-  width: 100%;
-  max-width: 600px;
-
-  margin: 0 auto;
 }
 
 .section > div p {
@@ -381,13 +368,13 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
 }
 
 .img__container img {
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 
