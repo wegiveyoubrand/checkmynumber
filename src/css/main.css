@@ -1,0 +1,367 @@
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: inherit;
+  font-family: inherit;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Poppins";
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  padding: 0 2rem;
+  height: 6rem;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #111155;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > div > div {
+  margin-right: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.main-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  padding: 2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  width: 100%;
+  gap: 10px;
+  border-top: 1px solid rgba(17, 17, 85, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+footer img {
+  height: 20px;
+  width: auto;
+}
+
+nav {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 6rem);
+  overflow: hidden;
+  background: rgba(17, 17, 85, 0.4);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  opacity: 0;
+  z-index: -1;
+}
+
+nav ul {
+  position: relative;
+  background-color: #111155;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  height: 100%;
+  justify-self: flex-end;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+  z-index: -1;
+}
+
+nav ul li {
+  height: 100px;
+  padding: 1rem;
+}
+
+nav ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+nav ul li a i {
+  margin-right: 10px;
+}
+
+nav .close-nav {
+  height: 100%;
+  width: 100%;
+}
+
+nav.active {
+  z-index: 100;
+  opacity: 1;
+}
+
+nav.active ul {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 140, 0.5);
+  display: -ms-grid;
+  display: grid;
+  padding: 15px;
+  place-items: center;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.close {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal .modal-popup {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.modal .modal-popup i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal .modal-popup h2 {
+  margin-top: 1rem;
+}
+
+section > div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.section > div p i {
+  font-size: 1.5rem;
+}
+
+.stored-numbers {
+  background: rgba(17, 17, 85, 0.1);
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.img__container {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slot {
+  position: fixed;
+  top: 6rem;
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+  max-height: 190px;
+  right: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  opacity: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.slot .toFullScreen {
+  position: absolute;
+  top: 0;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  right: 1px;
+  width: unset;
+  cursor: pointer;
+}
+
+.slot.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
+}
+
+.slotControl {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #0a1257;
+  border-radius: 20px;
+}
+
+.slot-content > div {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 140, 0.15);
+          box-shadow: 0 5px 5px rgba(0, 0, 140, 0.15);
+}
+
+.slot-content > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.networks {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: #fff;
+  grid-gap: 5%;
+  border-radius: 20px;
+}
+
+.networks .network {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.networks .network a {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 20px 2rem;
+}
+
+.networks .network:hover {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 139, 0.57);
+          box-shadow: 0 0 15px rgba(0, 0, 139, 0.57);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.slot-content .slot-content > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.slot-description {
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.slot button {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

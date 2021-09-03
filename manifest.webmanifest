@@ -1,7 +1,7 @@
 {
   "name": "Know My Number",
   "short_name": "KnowMyNumber",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#3367D6",
