@@ -42,7 +42,7 @@ function addeventListeners() {
       Modal.classList.add("close");
     });
   });
-
+  
   openModal.forEach((openAction) => {
     openAction.addEventListener("click", (e) => {
       e.preventDefault;
