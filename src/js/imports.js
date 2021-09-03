@@ -33,7 +33,7 @@ function addeventListeners() {
   // Slot Control event Listeners
   slotControl.addEventListener("click", (e) => {
     e.preventDefault;
-    all.slot.classList.toggle("active");
+    slot.classList.toggle("active");
   });
 
   // Modal Control Event Listenerss
@@ -54,7 +54,7 @@ function addeventListeners() {
   // Menu Control
   menuToggle.forEach((toggle) => {
     toggle.addEventListener("click", () => {
-      all.nav.classList.toggle("active");
+      nav.classList.toggle("active");
     });
   });
 }
