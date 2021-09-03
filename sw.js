@@ -10,6 +10,7 @@ const cacheAssets = [
   "/assets/images/airtel.png",
   "/assets/images/9mobile.png",
   "/assets/images/Layer1.png",
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap",
 ];
 
 self.addEventListener("install", (e) => {
